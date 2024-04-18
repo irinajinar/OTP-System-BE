@@ -1,0 +1,38 @@
+D:\test project bt\TestProjectBT\Infrastructure\bin\Debug\net7.0\Infrastructure.deps.json
+D:\test project bt\TestProjectBT\Infrastructure\bin\Debug\net7.0\Infrastructure.runtimeconfig.json
+D:\test project bt\TestProjectBT\Infrastructure\bin\Debug\net7.0\Infrastructure.dll
+D:\test project bt\TestProjectBT\Infrastructure\bin\Debug\net7.0\Infrastructure.pdb
+D:\test project bt\TestProjectBT\Infrastructure\bin\Debug\net7.0\Application.dll
+D:\test project bt\TestProjectBT\Infrastructure\bin\Debug\net7.0\Domain.dll
+D:\test project bt\TestProjectBT\Infrastructure\bin\Debug\net7.0\Application.pdb
+D:\test project bt\TestProjectBT\Infrastructure\bin\Debug\net7.0\Domain.pdb
+D:\test project bt\TestProjectBT\Infrastructure\obj\Debug\net7.0\Infrastructure.csproj.AssemblyReference.cache
+D:\test project bt\TestProjectBT\Infrastructure\obj\Debug\net7.0\Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\test project bt\TestProjectBT\Infrastructure\obj\Debug\net7.0\Infrastructure.AssemblyInfoInputs.cache
+D:\test project bt\TestProjectBT\Infrastructure\obj\Debug\net7.0\Infrastructure.AssemblyInfo.cs
+D:\test project bt\TestProjectBT\Infrastructure\obj\Debug\net7.0\Infrastructure.csproj.CoreCompileInputs.cache
+D:\test project bt\TestProjectBT\Infrastructure\obj\Debug\net7.0\Infrastructure.csproj.CopyComplete
+D:\test project bt\TestProjectBT\Infrastructure\obj\Debug\net7.0\Infrastructure.dll
+D:\test project bt\TestProjectBT\Infrastructure\obj\Debug\net7.0\refint\Infrastructure.dll
+D:\test project bt\TestProjectBT\Infrastructure\obj\Debug\net7.0\Infrastructure.pdb
+D:\test project bt\TestProjectBT\Infrastructure\obj\Debug\net7.0\Infrastructure.genruntimeconfig.cache
+D:\test project bt\TestProjectBT\Infrastructure\obj\Debug\net7.0\ref\Infrastructure.dll
+D:\MyGitProjects\OTP-System-BE\otp-system-be\Infrastructure\bin\Debug\net7.0\Infrastructure.deps.json
+D:\MyGitProjects\OTP-System-BE\otp-system-be\Infrastructure\bin\Debug\net7.0\Infrastructure.runtimeconfig.json
+D:\MyGitProjects\OTP-System-BE\otp-system-be\Infrastructure\bin\Debug\net7.0\Infrastructure.dll
+D:\MyGitProjects\OTP-System-BE\otp-system-be\Infrastructure\bin\Debug\net7.0\Infrastructure.pdb
+D:\MyGitProjects\OTP-System-BE\otp-system-be\Infrastructure\bin\Debug\net7.0\Application.dll
+D:\MyGitProjects\OTP-System-BE\otp-system-be\Infrastructure\bin\Debug\net7.0\Domain.dll
+D:\MyGitProjects\OTP-System-BE\otp-system-be\Infrastructure\bin\Debug\net7.0\Application.pdb
+D:\MyGitProjects\OTP-System-BE\otp-system-be\Infrastructure\bin\Debug\net7.0\Domain.pdb
+D:\MyGitProjects\OTP-System-BE\otp-system-be\Infrastructure\obj\Debug\net7.0\Infrastructure.csproj.AssemblyReference.cache
+D:\MyGitProjects\OTP-System-BE\otp-system-be\Infrastructure\obj\Debug\net7.0\Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\MyGitProjects\OTP-System-BE\otp-system-be\Infrastructure\obj\Debug\net7.0\Infrastructure.AssemblyInfoInputs.cache
+D:\MyGitProjects\OTP-System-BE\otp-system-be\Infrastructure\obj\Debug\net7.0\Infrastructure.AssemblyInfo.cs
+D:\MyGitProjects\OTP-System-BE\otp-system-be\Infrastructure\obj\Debug\net7.0\Infrastructure.csproj.CoreCompileInputs.cache
+D:\MyGitProjects\OTP-System-BE\otp-system-be\Infrastructure\obj\Debug\net7.0\Infrastructure.csproj.CopyComplete
+D:\MyGitProjects\OTP-System-BE\otp-system-be\Infrastructure\obj\Debug\net7.0\Infrastructure.dll
+D:\MyGitProjects\OTP-System-BE\otp-system-be\Infrastructure\obj\Debug\net7.0\refint\Infrastructure.dll
+D:\MyGitProjects\OTP-System-BE\otp-system-be\Infrastructure\obj\Debug\net7.0\Infrastructure.pdb
+D:\MyGitProjects\OTP-System-BE\otp-system-be\Infrastructure\obj\Debug\net7.0\Infrastructure.genruntimeconfig.cache
+D:\MyGitProjects\OTP-System-BE\otp-system-be\Infrastructure\obj\Debug\net7.0\ref\Infrastructure.dll

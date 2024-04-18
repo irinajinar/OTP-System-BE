@@ -1,0 +1,30 @@
+D:\test project bt\TestProjectBT\Application\bin\Debug\net7.0\Application.deps.json
+D:\test project bt\TestProjectBT\Application\bin\Debug\net7.0\Application.dll
+D:\test project bt\TestProjectBT\Application\bin\Debug\net7.0\Application.pdb
+D:\test project bt\TestProjectBT\Application\bin\Debug\net7.0\Domain.dll
+D:\test project bt\TestProjectBT\Application\bin\Debug\net7.0\Domain.pdb
+D:\test project bt\TestProjectBT\Application\obj\Debug\net7.0\Application.csproj.AssemblyReference.cache
+D:\test project bt\TestProjectBT\Application\obj\Debug\net7.0\Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\test project bt\TestProjectBT\Application\obj\Debug\net7.0\Application.AssemblyInfoInputs.cache
+D:\test project bt\TestProjectBT\Application\obj\Debug\net7.0\Application.AssemblyInfo.cs
+D:\test project bt\TestProjectBT\Application\obj\Debug\net7.0\Application.csproj.CoreCompileInputs.cache
+D:\test project bt\TestProjectBT\Application\obj\Debug\net7.0\Application.csproj.CopyComplete
+D:\test project bt\TestProjectBT\Application\obj\Debug\net7.0\Application.dll
+D:\test project bt\TestProjectBT\Application\obj\Debug\net7.0\refint\Application.dll
+D:\test project bt\TestProjectBT\Application\obj\Debug\net7.0\Application.pdb
+D:\test project bt\TestProjectBT\Application\obj\Debug\net7.0\ref\Application.dll
+D:\MyGitProjects\OTP-System-BE\otp-system-be\Application\obj\Debug\net7.0\Application.csproj.AssemblyReference.cache
+D:\MyGitProjects\OTP-System-BE\otp-system-be\Application\obj\Debug\net7.0\Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\MyGitProjects\OTP-System-BE\otp-system-be\Application\obj\Debug\net7.0\Application.AssemblyInfoInputs.cache
+D:\MyGitProjects\OTP-System-BE\otp-system-be\Application\obj\Debug\net7.0\Application.AssemblyInfo.cs
+D:\MyGitProjects\OTP-System-BE\otp-system-be\Application\obj\Debug\net7.0\Application.csproj.CoreCompileInputs.cache
+D:\MyGitProjects\OTP-System-BE\otp-system-be\Application\obj\Debug\net7.0\Application.dll
+D:\MyGitProjects\OTP-System-BE\otp-system-be\Application\obj\Debug\net7.0\refint\Application.dll
+D:\MyGitProjects\OTP-System-BE\otp-system-be\Application\obj\Debug\net7.0\Application.pdb
+D:\MyGitProjects\OTP-System-BE\otp-system-be\Application\bin\Debug\net7.0\Application.deps.json
+D:\MyGitProjects\OTP-System-BE\otp-system-be\Application\bin\Debug\net7.0\Application.dll
+D:\MyGitProjects\OTP-System-BE\otp-system-be\Application\bin\Debug\net7.0\Application.pdb
+D:\MyGitProjects\OTP-System-BE\otp-system-be\Application\bin\Debug\net7.0\Domain.dll
+D:\MyGitProjects\OTP-System-BE\otp-system-be\Application\bin\Debug\net7.0\Domain.pdb
+D:\MyGitProjects\OTP-System-BE\otp-system-be\Application\obj\Debug\net7.0\Application.csproj.CopyComplete
+D:\MyGitProjects\OTP-System-BE\otp-system-be\Application\obj\Debug\net7.0\ref\Application.dll

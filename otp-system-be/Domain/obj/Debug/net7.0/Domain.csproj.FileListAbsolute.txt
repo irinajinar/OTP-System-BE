@@ -1,0 +1,24 @@
+D:\test project bt\TestProjectBT\Domain\bin\Debug\net7.0\Domain.deps.json
+D:\test project bt\TestProjectBT\Domain\bin\Debug\net7.0\Domain.dll
+D:\test project bt\TestProjectBT\Domain\bin\Debug\net7.0\Domain.pdb
+D:\test project bt\TestProjectBT\Domain\obj\Debug\net7.0\Domain.csproj.AssemblyReference.cache
+D:\test project bt\TestProjectBT\Domain\obj\Debug\net7.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\test project bt\TestProjectBT\Domain\obj\Debug\net7.0\Domain.AssemblyInfoInputs.cache
+D:\test project bt\TestProjectBT\Domain\obj\Debug\net7.0\Domain.AssemblyInfo.cs
+D:\test project bt\TestProjectBT\Domain\obj\Debug\net7.0\Domain.csproj.CoreCompileInputs.cache
+D:\test project bt\TestProjectBT\Domain\obj\Debug\net7.0\Domain.dll
+D:\test project bt\TestProjectBT\Domain\obj\Debug\net7.0\refint\Domain.dll
+D:\test project bt\TestProjectBT\Domain\obj\Debug\net7.0\Domain.pdb
+D:\test project bt\TestProjectBT\Domain\obj\Debug\net7.0\ref\Domain.dll
+D:\MyGitProjects\OTP-System-BE\otp-system-be\Domain\bin\Debug\net7.0\Domain.deps.json
+D:\MyGitProjects\OTP-System-BE\otp-system-be\Domain\bin\Debug\net7.0\Domain.dll
+D:\MyGitProjects\OTP-System-BE\otp-system-be\Domain\bin\Debug\net7.0\Domain.pdb
+D:\MyGitProjects\OTP-System-BE\otp-system-be\Domain\obj\Debug\net7.0\Domain.csproj.AssemblyReference.cache
+D:\MyGitProjects\OTP-System-BE\otp-system-be\Domain\obj\Debug\net7.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\MyGitProjects\OTP-System-BE\otp-system-be\Domain\obj\Debug\net7.0\Domain.AssemblyInfoInputs.cache
+D:\MyGitProjects\OTP-System-BE\otp-system-be\Domain\obj\Debug\net7.0\Domain.AssemblyInfo.cs
+D:\MyGitProjects\OTP-System-BE\otp-system-be\Domain\obj\Debug\net7.0\Domain.csproj.CoreCompileInputs.cache
+D:\MyGitProjects\OTP-System-BE\otp-system-be\Domain\obj\Debug\net7.0\Domain.dll
+D:\MyGitProjects\OTP-System-BE\otp-system-be\Domain\obj\Debug\net7.0\refint\Domain.dll
+D:\MyGitProjects\OTP-System-BE\otp-system-be\Domain\obj\Debug\net7.0\Domain.pdb
+D:\MyGitProjects\OTP-System-BE\otp-system-be\Domain\obj\Debug\net7.0\ref\Domain.dll
