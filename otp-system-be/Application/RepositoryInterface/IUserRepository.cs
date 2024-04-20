@@ -10,9 +10,11 @@ namespace Application.RepositoryInterface
 {
     public interface IUserRepository
     {
-        Task AddUserAsync(User? user);
-        Task<User?> FindByEmailAsync(string email);
-        Task<User?> FindByPersonalIdentificationNumberAsync(string PersonalIdentificationNumber);
-       
+        Task AddUserAsync(User user);
+        Task<User> FindByEmailAsync(string email);
+        Task<User> FindByPersonalIdentificationNumberAsync(string personalIdentificationNumber);
+        Task UpdateUserAsync(User user);
+        Task<User> FindByFieldAsync(string value);
+
     }
 }

@@ -36,9 +36,8 @@ namespace Domain.Models
         [Required(ErrorMessage = "PIN is required")]
         [StringLength(50, ErrorMessage = "PIN must be between 1 and 4 characters", MinimumLength = 1)]
         public string Pin { get; set; } = string.Empty;
+        public string TemporaryPassword { get; set; }
+        public DateTime TemporaryPasswordGeneratedTime { get; set; }
 
-        
-
-        
     }
 }

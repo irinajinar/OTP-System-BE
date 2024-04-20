@@ -8,8 +8,7 @@ using System.Threading.Tasks;
 namespace Application.Dtos
 {
     public class UserDto
-    {
-        public Guid Id { get; set; }
+    {       
 
         [Required(ErrorMessage = "Email is required")]
         [EmailAddress(ErrorMessage = "Invalid email address")] 
@@ -22,6 +21,6 @@ namespace Application.Dtos
         [Required(ErrorMessage = "PIN is required")]
         [StringLength(50, ErrorMessage = "PIN must be between 1 and 4 characters", MinimumLength = 1)] 
         public string Pin { get; set; } = string.Empty;
-
+        
     }
 }
