@@ -1,11 +1,13 @@
 ﻿using Application.Dtos;
 using Application.RepositoryInterface;
+using Application.Security;
 using Application.ServiceInterface;
 using Domain.Exceptions;
 using Domain.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Threading.Tasks;
 
 namespace Application.ServiceImplementation
@@ -13,10 +15,12 @@ namespace Application.ServiceImplementation
     public class UserService : IUserService
     {
         private readonly IUserRepository _userRepository;
+        private readonly string _encryptionKey;
 
         public UserService(IUserRepository userRepository)
         {
             _userRepository = userRepository;
+            _encryptionKey = GenerateAesKey();
         }
 
         public async Task<User> Register(UserDto userRegisterDto)
@@ -26,13 +30,16 @@ namespace Application.ServiceImplementation
             await EnsureUniqueField(userRegisterDto.Email, "Email");
             await EnsureUniqueField(userRegisterDto.PersonalIdentificationNumber, "Personal Identification Number");
 
-            var temporaryPassword = GenerateTemporaryPassword();
+            var temporaryPassword = GenerateRandomPassword();
+                        
+            var encryptedTemporaryPassword = Encryption.Encrypt(temporaryPassword, _encryptionKey);
+
             var newUser = new User
             {
                 Email = userRegisterDto.Email,
                 PersonalIdentificationNumber = userRegisterDto.PersonalIdentificationNumber,
-                Pin = userRegisterDto.Pin,
-                TemporaryPassword = temporaryPassword
+                Pin = userRegisterDto.Pin, 
+                TemporaryPassword = encryptedTemporaryPassword 
             };
 
             await _userRepository.AddUserAsync(newUser);
@@ -46,12 +53,15 @@ namespace Application.ServiceImplementation
 
             var user = await _userRepository.FindByEmailAsync(userLoginDto.Email);
 
-            if (user == null || !IsValidUser(user, userLoginDto))
+            if (user == null || user.Pin != userLoginDto.Pin)
             {
-                throw new UnauthorizedAccessException("Invalid credentials.");
+                throw new UnauthorizedAccessException("Invalid credentials. No user found with the provided email or PIN doesn't match.");
             }
+                        
+            var newTemporaryPassword = GenerateRandomPassword();
+            var newEncryptedTemporaryPassword = Encryption.Encrypt(newTemporaryPassword, _encryptionKey);
 
-            user.TemporaryPassword = GenerateNewTemporaryPassword(user.TemporaryPassword);
+            user.TemporaryPassword = newEncryptedTemporaryPassword;
             user.TemporaryPasswordGeneratedTime = DateTime.UtcNow;
             await _userRepository.UpdateUserAsync(user);
 
@@ -61,22 +71,28 @@ namespace Application.ServiceImplementation
         public async Task<string> GenerateTemporaryPassword(UserDto userLoginDto)
         {
             var user = await _userRepository.FindByEmailAsync(userLoginDto.Email);
-            if (user == null || !IsValidUser(user, userLoginDto))
+                        
+            if (user == null || user.Pin != userLoginDto.Pin)
             {
                 throw new MultivalidationException("Invalid credentials.");
             }
-
+                        
             if (!IsTemporaryPasswordExpired(user))
-            {
-                return user.TemporaryPassword;
+            {                
+                var temporaryPassword = GenerateRandomPassword();
+                                
+                var encryptedTemporaryPassword = Encryption.Encrypt(temporaryPassword, _encryptionKey);
+                                
+                user.TemporaryPassword = encryptedTemporaryPassword;
+                user.TemporaryPasswordGeneratedTime = DateTime.UtcNow;
+                await _userRepository.UpdateUserAsync(user);
+                                
+                return temporaryPassword;
             }
-
-            var temporaryPassword = GenerateRandomPassword();
-            user.TemporaryPassword = temporaryPassword;
-            user.TemporaryPasswordGeneratedTime = DateTime.UtcNow;
-            await _userRepository.UpdateUserAsync(user);
-
-            return temporaryPassword;
+            else
+            {                
+                return "Your password validity has expired.";
+            }
         }
 
         private static void ValidateUser(UserDto userDto)
@@ -113,11 +129,6 @@ namespace Application.ServiceImplementation
             }
         }
 
-        private static bool IsValidUser(User user, UserDto userDto)
-        {
-            return user.Pin == userDto.Pin && user.PersonalIdentificationNumber == userDto.PersonalIdentificationNumber;
-        }
-
         private static bool IsValidEmail(string email)
         {
             try
@@ -131,37 +142,28 @@ namespace Application.ServiceImplementation
             }
         }
 
-        private static string GenerateTemporaryPassword()
-        {
-            var chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-            var random = new Random();
-            return new string(Enumerable.Repeat(chars, 8)
-              .Select(s => s[random.Next(s.Length)]).ToArray());
-        }
-
         private static string GenerateRandomPassword()
         {
-            var chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+            var chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()+=";
             var random = new Random();
             return new string(Enumerable.Repeat(chars, 8)
               .Select(s => s[random.Next(s.Length)]).ToArray());
-        }
-
-        private static string GenerateNewTemporaryPassword(string existingTemporaryPassword)
-        {
-            var chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-            var random = new Random();
-                        
-            var newPassword = new string(Enumerable.Repeat(chars, 6)
-                .Select(s => s[random.Next(s.Length)]).ToArray());
-                        
-            return existingTemporaryPassword + newPassword;
         }
 
         private static bool IsTemporaryPasswordExpired(User user)
         {
             var temporaryPasswordExpirationTimeSpan = TimeSpan.FromMinutes(5);
             return DateTime.UtcNow > user.TemporaryPasswordGeneratedTime.Add(temporaryPasswordExpirationTimeSpan);
+        }
+
+        private static string GenerateAesKey()
+        {
+            using (Aes aes = Aes.Create())
+            {
+                aes.KeySize = 256;
+                aes.GenerateKey();
+                return Convert.ToBase64String(aes.Key);
+            }
         }
     }
 }
